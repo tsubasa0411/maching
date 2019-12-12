@@ -2,13 +2,14 @@
 
 class AddDeviseToUsers < ActiveRecord::Migration[5.2]
   def self.up
-    change_table :users do |t|
-      ## Database authenticatable
+    create_table :users do |t|
       t.string :name
+
       t.string :password_digest
       t.string :profile
       t.string :remember_digest
-      t.string :email,              null: false, default: ""
+      ## Database authenticatable
+      t.string :email
       t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable
