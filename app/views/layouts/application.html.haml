@@ -4,11 +4,11 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
-    %title maching🐶
+    %title dog_maching
     = csrf_meta_tags
     = csp_meta_tag
     %link{:href => "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css", :rel => "stylesheet"}/
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %script{:src => "https://code.jquery.com/jquery-3.3.1.slim.min.js"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"}
@@ -16,4 +16,13 @@
     %script{:defer => "defer", :src => "https://use.fontawesome.com/releases/v5.7.2/js/all.js"}
   %body
     .container
-      
+      - if current_page?(root_path) || logged_in? && current_page?(followers_user_path(current_user))
+        .top-wrapper
+          = render 'layouts/header'
+      - else
+        .nav
+          = render 'layouts/header'
+      = render 'layouts/flash_messages'
+      = yield
+      %footer
+        %a{:href => contact_path, :style => "color: #FFF"} お問い合わせ

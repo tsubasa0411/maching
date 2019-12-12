@@ -1,4 +1,4 @@
-.text-center.Engineer-link
+.text-center
   .headerNav
     .container
       .row.headerNavBox
@@ -7,8 +7,8 @@
         .col-xs-12.col-sm-3.headerNavBtn
           .dropdown-toggle
             =link_to "見る", root_path
-        .col-xs-12.col-sm-3.headerNavBtn{:href => "/signup"}
-          =link_to "新規登録"
+        .col-xs-12.col-sm-3.headerNavBtn
+          -# =link_to ("新規登録", signup_path ) 
         .col-xs-12.col-sm-3.headerNavBtn  ペット専用のマッチングアプリ。
   %p.mt-5 ■ ■ ■このWEBサイトについて ■ ■ ■
 %a.top-signup.login{:href => "/login"} Login
