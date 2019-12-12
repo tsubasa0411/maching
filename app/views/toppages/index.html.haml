@@ -1,0 +1,29 @@
+%h1.text-center.Engineer-link tsubasa
+  .headerNav
+    .container
+      .row.headerNavBox
+        .col-xs-12.col-sm-3.headerNavBtn
+          =link_to "トップページ", root_path
+        .col-xs-12.col-sm-3.headerNavBtn
+          .dropdown-toggle
+            =link_to "見る", root_path
+        .col-xs-12.col-sm-3.headerNavBtn{:href => "/signup"}
+          =link_to "新規登録",new_user_registration_path
+        .col-xs-12.col-sm-3.headerNavBtn
+@@ -26,32 +21,28 @@
+  %h3{:style => "font-size: 16px"} ペット専用のマッチングアプリ。
+  %p.mt-5 ■ ■ ■このWEBサイトについて ■ ■ ■
+%a.top-signup.login{:href => "/login"} Login
+.top{:ontouchstart => ""}
+  .mask
+    %p.caption.text-center いいね機能
+    .caption.text-center
+      %p
+        気になるユーザーをいいねしよう！
+          %p.caption.text-center 相談
+              %p.caption.text-center 卒業生
+    .caption.text-center 卒業生の写真や現状を投稿してみよう！
+%a.top-signup.signup{:href => "/signup"} Sign up
+%p.text-center or
+%a.top-signup.login{:href => "/login"} Login
+%footer
