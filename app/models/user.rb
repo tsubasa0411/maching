@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   attr_accessor :remember_token
   # attr_accessorは、データベースに保存されないカラム(モデルに持たせるデータ)を作る
-  validates :name, presence: true, length: { maximum: 50 }
+  validates :nickname, presence: true, length: { maximum: 50 }
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: { case_sensitive: false }
