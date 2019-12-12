@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   attr_accessor :remember_token
   # attr_accessorは、データベースに保存されないカラム(モデルに持たせるデータ)を作る
   validates :name, presence: true, length: { maximum: 50 }
