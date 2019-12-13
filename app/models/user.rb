@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+        :recoverable, :rememberable, :validatable
         before_save { self.email = email.downcase }
         # バリデーションに成功し、実際にオブジェクトが保存される直前で実行されます
   attr_accessor :remember_token
@@ -16,6 +16,7 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }
 
   has_secure_password
+  has_one_attached :avatar
 
 # ログイン周りに必要な定義↓
 
