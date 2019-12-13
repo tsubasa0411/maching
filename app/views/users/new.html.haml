@@ -2,20 +2,20 @@
   %h1 Sign up
 .row
   .col-sm-6.offset-sm-3
-    = form_with(model: @user, local: true) do |f|
+    = form_with(model: @user, url: signup_path,   method: :post,local: true) do |f|
       .form-group
         = f.label :avatar, 'アイコンを選択'
         = f.file_field :avatar
       .form-group
         = f.label :nickname, 'Name'
-        = f.text_field :name, class: 'form-control'
+        = f.text_field :name,  placeholder: "ニックネーム", class: 'form-control'
       .form-group
         = f.label :email, 'Email'
-        = f.email_field :email, class: 'form-control'
+        = f.email_field :email,  placeholder: "Email", class: 'form-control'
       .form-group
         = f.label :password, 'Password'
-        = f.password_field :password, class: 'form-control'
+        = f.password_field :password,placeholder: "7文字以上", class: 'form-control'
       .form-group
         = f.label :password_confirmation, 'Confirmation'
-        = f.password_field :password_confirmation, class: 'form-control'
+        = f.password_field :password_confirmation,placeholder: "パスワード確認", class: 'form-control'
       = f.submit 'Sign up', class: 'btn btn-primary btn-block'
