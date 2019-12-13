@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Users::SessionsController < Devise::SessionsController
+class SessionsController < ApplicationController
   def new
   end
 
@@ -21,5 +21,5 @@ class Users::SessionsController < Devise::SessionsController
     log_out if logged_in?
     redirect_to root_url
   end
-  
+
 end

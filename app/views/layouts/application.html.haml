@@ -25,5 +25,7 @@
           .dropdown-toggle
             =link_to "見る", root_path
         .col-xs-12.col-sm-3.headerNavBtn
-          =link_to "新規登録", login_path
+          =link_to "新規登録", signup_path,method: :get ,class: "col-sm-6 offset-sm-3"
+        .col-xs-12.col-sm-3.headerNavBtn
+          =link_to "ログイン" , login_path
 = yield
