@@ -1,0 +1,40 @@
+.row
+  .col-sm-5
+  .text-center プロフィール
+  - unless  @user.profile.nil?
+    = @user.profile.gsub(/\r\n|\r|\n/, "<br />").html_safe
+
+
+-#     .text-center
+-#   - if @user.avatar.attached?
+-#     = image_tag @user.avatar, size: '150x150', class: "image-fit"
+-#   %p= @user.name
+-#   - if logged_in? && current_user.id != @user.id
+-#     = render 'relationships/follow_button', user: @user
+-#   - if logged_in? && current_user.id == @user.id
+-#     = link_to 'プロフィール編集', edit_user_path(current_user), class: 'btn btn-primary'
+-# .row
+-#   .col-sm-5
+-#     %p.text-center &#x30D7;&#x30ED;&#x30D5;&#x30A3;&#x30FC;&#x30EB;
+-#     - unless @user.profile.nil?
+-#       = @user.profile.gsub(/\r\n|\r|\n/, "<br />").html_safe
+-#     - else
+-#       - if current_user.id == @user.id
+-#         %p &#x30D7;&#x30ED;&#x30D5;&#x30A3;&#x30FC;&#x30EB;&#x3092;&#x5165;&#x529B;&#x3057;&#x307E;&#x305B;&#x3093;&#x304B;&#xFF1F;
+-#       - else
+-#         %p &#x30D7;&#x30ED;&#x30D5;&#x30A3;&#x30FC;&#x30EB;&#x306F;&#x672A;&#x5165;&#x529B;&#x3067;&#x3059;
+-#   .col-sm-6
+-#     %p.text-center &#x8A73;&#x7D30;
+-#     %ul.nav.nav-tabs.nav-justified.mb-3.user-nav-tabs
+-#       %li.nav-item
+-#         %a{:href => ""}
+-#         = user_path(@user)
+-#         " class="nav-link #{'active' if current_page?(user_path(@user))}"&gt;Posts
+-#     %li.nav-item
+-#       %a{:href => ""}
+-#       = add_tag_user_path(@user)
+-#       " class="nav-link #{'active' if current_page?(add_tag_user_path(@user))}"&gt;Tags
+-# = succeed "," do
+-#   %a.top-signup
+-# = posts_path
+-# "&gt;&#x6295;&#x7A3F;&#x753B;&#x9762;&#x3078;
