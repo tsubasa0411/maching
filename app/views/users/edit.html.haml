@@ -8,13 +8,13 @@
         = f.file_field :avatar
       .form-group
         = f.label :nickname, 'Name'
-        = f.text_field :name,  placeholder: "ニックネーム", class: 'form-control'
+        = f.text_field :name,  placeholder: "ニックネーム", class: 'form-control', value: @user.nickname
       .form-group
         = f.label :email, 'Email'
-        = f.email_field :email,  placeholder: "Email", class: 'form-control'
+        = f.email_field :email,  placeholder: "Email", class: 'form-control',  value: @user.email
       .form-group
         = f.label :profile, 'Profile'
-        = f.email_field :profile,  placeholder: "profile", class: 'form-control'
+        = f.text_aria :profile,  placeholder: "profile", class: 'form-control', value: @user.profile
 
       .form-group
         = f.label :password, 'Password'
@@ -23,3 +23,4 @@
         = f.label :password_confirmation, 'Confirmation'
         = f.password_field :password_confirmation,placeholder: "パスワード確認", class: 'form-control'
       = f.submit '編集する', class: 'btn btn-primary btn-block'
+ 
