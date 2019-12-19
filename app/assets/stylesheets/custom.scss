@@ -40,10 +40,10 @@ body , html {
 .headerNavBtn:hover {
   color: #3be5ae;
 }
-.headerNavBtn:hover::after,
-.headerNavBtn:hover::before {
-  transform: scale(1);
-}
+// .headerNavBtn:hover::after,
+// .headerNavBtn:hover::before {
+//   transform: scale(1);
+// }
 
 .top-wrapper{
   background-repeat: no-repeat;
@@ -78,8 +78,8 @@ header{
   transition: all .3s;
   text-align:center;
   transform: scale(1);
- 
 }
+
 .headerNavBox a{
   text-decoration: none;
   color: #FFFFFF;
