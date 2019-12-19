@@ -99,26 +99,7 @@ header{
   margin-left: 0;
 }
 
-.tag {
-  margin-bottom: 50px;
-}
 
-.tag-form{
-  margin-top: 50px;
-}
-
-.tag-button {
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
-.tag-delete-button {
-  margin-bottom: 20px;
-}
-
-.top-nav-tabs{
-  margin-top: 30px;
-}
 
 .image-fit {
   object-fit: cover;
@@ -129,62 +110,6 @@ header{
   object-fit: cover;
 }
 
-section.message_box {
-  padding: 10px;
-  //border: 1px solid $gray-light;
-  overflow: scroll;
-  #messages {
-    height: 500px;
-  }
-}
-
-div#message_fixed {
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 50px;
-}
-
-div#message-bk{
-  background-color:#444;
-	padding: 10px 0 20px;
-	height: 50px;
-	width: 100%;
-}
-
-div#message-footer{
-	height: 100%;
-	width: 800px; 
-	margin: auto;
-}
-
-#message_sender {
-  font-size: 1.1em;
-}
-
-#message_content {
-  font-size: 1.0em;
-}
-
-.messagebox-user{
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background-color: #D3D3D3;
-  height: 50px;
-  padding-top: 15px;
-  color: #000033;
-}
-
-#message_content{
-  font-family: "serif";
-  border-bottom: 1px solid #EEEEEE;
-  padding-bottom: 100px;
-}
 
 .top-nav-tabs a{
   color: #FFFFFF;
@@ -319,47 +244,6 @@ div#message-footer{
   display: inline-block;
 }
 
-.card{
-  background-color: #333333;
-}
-
-.card a{
-  color: #FFFFFF;
-}
-
-.posts-content{
-  word-wrap: break-word;
-}
-
-.tweet{
-  padding: 0.5em 1em;
-  margin: 2em 0;
-  color: #FFFFFF;
-  border-top: solid 5px #333333;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-}
-
-.tweet p{
-  margin: 0; 
-  padding: 0;
-  margin-top: 10px;
-}
-
-.tweet a{
-  color: #FFFFFF;
-}
-
-.contact{
-  margin-top: 50px;
-}
-
-.search-label{
-  margin-right: 20px;
-}
-
-.search-button{
-  margin-bottom: 30px;
-}
 
 footer{
   margin-top: 100px;
