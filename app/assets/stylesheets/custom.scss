@@ -15,24 +15,9 @@ body , html {
   margin-bottom: 100px;
 }
 
-.top-signup{
-  position: relative;
-  display: inline-block;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
-  margin-top: 50px;
-  padding: .9em 3.6em;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  outline: none;
-  transition: all .3s;
-}
 
-.top-signup::before,
-.top-signup::after {
+.headerNavBtn::before,
+.headerNavBtn::after {
   position: absolute;
   top: -2px;
   right: -2px;
@@ -42,21 +27,21 @@ body , html {
   content: '';
   transition: all .3s;
 }
-.top-signup::before {
+.headerNavBtn::before {
   border-top: 2px solid #3be5ae;
   border-bottom: 2px solid #3be5ae;
   transform: scale(0, 1);
 }
-.top-signup::after {
+.headerNavBtn::after {
   border-right: 2px solid #3be5ae;
   border-left: 2px solid #3be5ae;
   transform: scale(1, 0);
 }
-.top-signup:hover {
+.headerNavBtn:hover {
   color: #3be5ae;
 }
-.top-signup:hover::after,
-.top-signup:hover::before {
+.headerNavBtn:hover::after,
+.headerNavBtn:hover::before {
   transform: scale(1);
 }
 
@@ -79,23 +64,25 @@ header{
 }
 
 .headerNavBtn {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  margin-top: 50px;
+  padding: .9em 3.6em;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  transition: all .3s;
   text-align:center;
-  height:3em;
-  line-height:3em;
-  color:#F5F5F5;
-  font-size:16px;
-  margin-bottom: 20px;
-  background-color: transparent;
-  line-height: 50px;
+  transform: scale(1);
+ 
 }
 .headerNavBox a{
   text-decoration: none;
   color: #FFFFFF;
-}
-
-.headerNavBtn:hover{
-  background-color: rgba(255, 255, 255, .2);
-  transition: 1.0s ;
 }
 
 .checkbox {
