@@ -24,5 +24,6 @@
         =link_to "新規登録", signup_path,method: :get , class: "col-xs-12.col-sm-3 headerNavBtn"
         =link_to "ログイン" , login_path, class: "col-xs-12.col-sm-3 headerNavBtn"
 = yield
-%footer
-  %a{:href => contact_path, :style => "color: #FFF"} お問い合わせ
+.footertop
+  =link_to "お問い合わせ", contact_path, class: "footer"
+
