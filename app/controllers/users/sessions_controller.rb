@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class SessionsController < ApplicationController
   def new
   end
@@ -7,10 +5,10 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].douncase)
     if user && user.authenticate(params[:session][:password])
-       # session[:user_id] = user.idをカスタムヘルパーで定義してもの
+      # session[:user_id] = user.idをカスタムヘルパーで定義してもの
       log_in user
-       #　三項演算子で条件分岐処理
-       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+      #　三項演算子で条件分岐処理
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       redirect_to user
     else
       flash.now[:danger] = 'Invalid email/password combination'
@@ -21,5 +19,15 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url
   end
-
+  private
+  
+  def login(email, password)
+    @user = User.find_by(email: email)
+    if @user && @user.authenticate(password)
+      session[:user_id] = @user.id
+      return true
+    else
+      return false
+    end
+  end
 end

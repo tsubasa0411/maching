@@ -2,7 +2,7 @@
   %h1 Sign up
 .row
   .col-sm-6.offset-sm-3
-    = form_with(model: @user, url: signup_path, method: :post, local: true) do |f|
+    = form_with(model: @user, url: root_path, method: :post, local: true) do |f|
       .form-group
         = f.label :avatar, 'アイコンを選択'
         = f.file_field :avatar
