@@ -20,7 +20,11 @@
     .container
       .headerNavBox
         =link_to "トップページ", root_path, class: "col-xs-12.col-sm-3 headerNavBtn"
-        =link_to "見る", root_path, class: "col-xs-12.col-sm-3 headerNavBtn"
+        =link_to "見る", root_path, class: "col-xs-12.col-sm-3 headerNavBtn" do
+          =link_to "検索", root_path, class: "more"
+      
+
+
         =link_to "新規登録", signup_path,method: :get , class: "col-xs-12.col-sm-3 headerNavBtn"
         =link_to "ログイン" , sign_in_path, class: "col-xs-12.col-sm-3 headerNavBtn"
 = yield
