@@ -8,12 +8,12 @@ class User < ApplicationRecord
   attr_accessor :remember_token
   # ログイン時に発行するトークンを保持し、cookieにも同様の値を保持させ、ログインしているかどうかを判別するのに使用します。
 
-  validates :nickname, presence: true, length: { maximum: 50 }
-  validates :email, presence: true, length: { maximum: 255 },
-                    format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
-                    uniqueness: { case_sensitive: false }
-  validates :profile, length: { maximum: 200}
-  validates :password, presence: true, length: { minimum: 6 }
+  # validates :nickname, presence: true, length: { maximum: 50 }
+  # validates :email, presence: true, length: { maximum: 255 },
+  #                   format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
+  #                   uniqueness: { case_sensitive: false }
+  # validates :profile, length: { maximum: 200}
+  # validates :password, presence: true
 
   has_secure_password
   has_one_attached :avatar

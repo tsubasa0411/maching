@@ -1,15 +1,19 @@
 Rails.application.routes.draw do
-
-  # devise_for :users
   root to: 'toppages#index'
   
   get 'contact', to: 'toppages#contact'
-  get "sign_in", to: "users/sessions#new"
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   
   get 'signup', to: 'users#new'
-  post 'signup', to: 'users#create'
+  resources :users, only: [:show, :new, :create, :edit, :update] do
+    member do
+      get :followers
+    end
+  end
+  
 
-  resources :users, only: [:show, :new, :create , :edit] 
+  mount ActionCable.server => '/cable'
+  
 end
-
