@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   
 
   mount ActionCable.server => '/cable'
-  
+  # フォロー機能に必要な記述
 end
