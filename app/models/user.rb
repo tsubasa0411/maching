@@ -28,7 +28,7 @@ class User < ApplicationRecord
   end
 
   # ランダムなトークンを返す。Userモデルのクラスメソッドとして作成する
-  def self.new_token
+  def User.new_token
     SecureRandom.urlsafe_base64
   end
 

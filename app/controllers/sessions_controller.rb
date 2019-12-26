@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
       log_in user
       #　三項演算子で条件分岐処理
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+      flash[:success] = 'ログインに成功しました。'
       redirect_to user
     else
       flash.now[:danger] = 'Invalid email/password combination'
@@ -17,7 +18,8 @@ class SessionsController < ApplicationController
   end
   
   def destroy
-    log_out if logged_in?
+    logout if logged_in?
+    flash[:success] = 'ログアウトしました'
     redirect_to root_url
   end
   private
