@@ -43,7 +43,7 @@ class UsersController < ApplicationController
                                   :profile, 
                                   :password, 
                                   :password_confirmation)
-    endd
+    end
   end
   
 
