@@ -30,7 +30,7 @@ class UsersController < ApplicationController
         render :edit
         end
       else
-        redirect_to ("/")
+        redirect_to root_url
       end
 
     end
